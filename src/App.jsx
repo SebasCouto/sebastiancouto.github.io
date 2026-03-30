@@ -60,7 +60,7 @@ export default function SebastianCoutoPortfolioV2() {
       name: "Layer Validation PoC",
       summary:
         "Validación end-to-end de reportes financieros, conectando mocks de API, lógica de negocio y documentos PDF para asegurar consistencia real.",
-      tags: ["QA", "E2E", "Finance", "Automation"],
+      tags: ["QA", "E2E", "Finance", "Automation", "psycopg2", "pytesseract", "PyPDF2"],
       language: "Python",
       href: "https://github.com/SebasCouto/sebco-labs-layer-validation",
       accent: "standard",
@@ -89,7 +89,7 @@ export default function SebastianCoutoPortfolioV2() {
         "Exploraciones para transformar resultados técnicos en reportes más claros, visuales y útiles para seguimiento.",
       tags: ["Reports", "Metrics", "QA"],
       language: "TBD",
-      href: #",
+      href: "#",
       accent: "standard",
     },
   ];
@@ -251,6 +251,9 @@ export default function SebastianCoutoPortfolioV2() {
       </div>
     </section>
   );
+
+  const remainingCount = featuredRepos.length - visibleCount;
+  const nextBatchCount = Math.min(3, remainingCount);
 
   return (
     <div className="min-h-screen overflow-x-clip bg-[#07111f] text-slate-100">
@@ -579,10 +582,12 @@ export default function SebastianCoutoPortfolioV2() {
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
             {hasMore ? (
               <button
-                onClick={() => setVisibleCount((prev) => prev + 3)}
+                onClick={() =>
+                  setVisibleCount((prev) => Math.min(prev + 3, featuredRepos.length))
+                }
                 className="inline-flex items-center gap-2 rounded-2xl border border-blue-300/25 bg-blue-400/15 px-5 py-3 text-sm font-medium text-white transition hover:bg-blue-400/20"
               >
-                Ver 3 más <ChevronDown className="h-4 w-4" />
+                Ver {nextBatchCount} más <ChevronDown className="h-4 w-4" />
               </button>
             ) : (
               <button
