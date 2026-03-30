@@ -30,21 +30,21 @@ import { GitHubIcon, LinkedInIcon, EmailIcon } from "./components/SocialIcons";
 export default function SebastianCoutoPortfolioV2() {
   const featuredRepos = [
     {
-      name: "PlatformUnityCI",
+      name: "Cross Platform Guard",
       summary:
-        "Framework orientado a calidad como sistema: feedback automatizado en PRs, reusable workflows y señales confiables en CI.",
-      tags: ["Python", "GitHub Actions", "Quality Engineering"],
+        "Reusable QA engine that enables cross-repository validation, automated PR analysis and quality enforcement using GitHub Actions.",
+      tags: ["QA", "CI/CD", "GitHub Actions", "Automation", "AI"],
       language: "Python",
-      href: "#",
-      accent: "core",
+      href: "https://github.com/PlatformUnityCI/cross-platform-guard",
+      accent: "standard",
     },
     {
-      name: "cross-quality-ci",
+      name: "Cross Quality CI",
       summary:
-        "Base reusable para mover controles de calidad entre repos y evolucionar hacia un enfoque multilenguaje.",
-      tags: ["CI/CD", "Reusable Workflows", "Automation"],
+        "Capa de CI reutilizable que estandariza controles de calidad entre repositorios, permitiendo escalar pipelines de testing multilenguaje.",
+      tags: ["CI/CD", "Reusable Workflows", "Automation", "QA"],
       language: "YAML",
-      href: "#",
+      href: "https://github.com/PlatformUnityCI/cross-quality-ci",
       accent: "standard",
     },
     {
@@ -53,25 +53,16 @@ export default function SebastianCoutoPortfolioV2() {
         "Exploración práctica de mutmut para medir efectividad de tests, detectar mutantes sobrevivientes y fortalecer cobertura real.",
       tags: ["mutmut", "pytest", "Test Effectiveness"],
       language: "Python",
-      href: "#",
+      href: "https://github.com/PlatformUnityCI/sebco-labs-mutation-testing",
       accent: "core",
-    },
+    },    
     {
-      name: "PR Feedback System",
+      name: "Layer Validation PoC",
       summary:
-        "Automatización de hallazgos en pull requests con comentarios accionables, foco en señal y mejora continua.",
-      tags: ["PR Review", "Automation", "Quality Gates"],
+        "Validación end-to-end de reportes financieros, conectando mocks de API, lógica de negocio y documentos PDF para asegurar consistencia real.",
+      tags: ["QA", "E2E", "Finance", "Automation"],
       language: "Python",
-      href: "#",
-      accent: "core",
-    },
-    {
-      name: "QA Reporting Lab",
-      summary:
-        "Exploraciones para transformar resultados técnicos en reportes más claros, visuales y útiles para seguimiento.",
-      tags: ["Reports", "Metrics", "QA"],
-      language: "Python",
-      href: "#",
+      href: "https://github.com/SebasCouto/sebco-labs-layer-validation",
       accent: "standard",
     },
     {
@@ -81,6 +72,24 @@ export default function SebastianCoutoPortfolioV2() {
       tags: ["API Testing", "Validation", "pytest"],
       language: "Python",
       href: "#",
+      accent: "standard",
+    },
+    {
+      name: "PR Feedback System",
+      summary:
+        "Automatización de hallazgos en pull requests con comentarios accionables, foco en señal y mejora continua.",
+      tags: ["PR Review", "Automation", "Quality Gates"],
+      language: "TBD",
+      href: "#",
+      accent: "core",
+    },
+    {
+      name: "QA Reporting Lab",
+      summary:
+        "Exploraciones para transformar resultados técnicos en reportes más claros, visuales y útiles para seguimiento.",
+      tags: ["Reports", "Metrics", "QA"],
+      language: "TBD",
+      href: #",
       accent: "standard",
     },
   ];
@@ -503,8 +512,8 @@ export default function SebastianCoutoPortfolioV2() {
               </h2>
             </div>
             <p className="max-w-2xl text-sm leading-7 text-slate-400">
-              Esta versión muestra proyectos destacados de forma curada. Más adelante esta
-              sección puede nutrirse automáticamente desde GitHub con actividad, métricas y
+              Mi intención es mostrar proyectos destacados de forma curada. Más adelante esta
+              sección se nutrirá automáticamente desde GitHub con actividad, métricas y
               señales adicionales.
             </p>
           </div>
@@ -799,7 +808,7 @@ export default function SebastianCoutoPortfolioV2() {
                   Let’s build better quality signals
                 </h2>
                 <p className="mt-4 max-w-2xl text-base leading-8 text-slate-300">
-                  Esta V2 prioriza claridad, señal e identidad profesional, manteniendo una
+                  Esta portfolio prioriza claridad, señal e identidad profesional, manteniendo una
                   base sólida para evolucionar hacia un portfolio vivo con datos automáticos
                   desde GitHub.
                 </p>
