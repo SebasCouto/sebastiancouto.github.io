@@ -340,21 +340,10 @@ export default function SebastianCoutoPortfolioV2() {
                   bajo normativas regionales, trabajando sobre flujos críticos, datos sensibles y 
                   entornos de alta confiabilidad. Mi enfoque combina testing funcional, 
                   automatización de APIs y diseño de pipelines de calidad orientados a señal.
+                  Actualmente enfocado en evolucionar hacia un rol SDET puro, construyendo soluciones 
+                  que mejoren la calidad desde el pipeline.
                 </p>
 
-                <p className="max-w-2xl text-base leading-7 text-slate-400">
-                  Trabajo con Postman para exploración inicial de servicios y evoluciono hacia suites
-                  automatizadas en Python con pytest, integradas en CI para validar regresión,
-                  estabilidad de entornos y sanidad de sistemas. Actualmente enfocado en evolucionar
-                  hacia un rol SDET puro, construyendo soluciones que mejoren la calidad desde el pipeline.
-                </p>
-
-                <p className="max-w-2xl text-base leading-7 text-slate-400">
-                  Experiencia en entornos serverless sobre AWS, análisis de logs con CloudWatch
-                  y colaboración directa con equipos de desarrollo en la mejora de diagramas de
-                  arquitectura y flujos críticos. Participación en pruebas cross-producto y
-                  coordinación de validaciones en sistemas complejos.
-                </p>
               </div>
             </div>
 
@@ -499,16 +488,17 @@ export default function SebastianCoutoPortfolioV2() {
                   Core stack and capabilities
                 </h2>
 
-                <p className="text-base leading-8 text-slate-400">
-                  Trabajo con APIs desde su exploración inicial en Postman hasta su evolución a suites
-                  automatizadas en Python con pytest, integradas en pipelines de CI para validar regresión,
-                  estabilidad y sanidad de los entornos.
+                <p className="max-w-2xl text-base leading-7 text-slate-400">
+                  Trabajo con Postman para exploración inicial de servicios y evoluciono hacia suites
+                  automatizadas en Python con pytest y requests, integradas en CI para validar regresión,
+                  estabilidad de entornos y sanidad de sistemas.
                 </p>
 
-                <p className="text-base leading-8 text-slate-400">
-                  Experiencia en entornos serverless sobre AWS, análisis de logs con CloudWatch y colaboración
-                  directa con equipos de desarrollo en la mejora de diagramas de arquitectura y flujos críticos.
-                  Participación en pruebas cross-producto y coordinación de validaciones en sistemas complejos.
+                <p className="max-w-2xl text-base leading-7 text-slate-400">
+                  Experiencia en entornos serverless sobre AWS, análisis de logs con CloudWatch
+                  y colaboración directa con equipos de desarrollo en la mejora de diagramas de
+                  arquitectura y flujos críticos. Participación en pruebas cross-producto y
+                  coordinación de validaciones en sistemas complejos.
                 </p>
 
                 <p className="text-base leading-8 text-slate-400">
