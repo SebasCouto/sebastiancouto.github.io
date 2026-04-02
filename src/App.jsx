@@ -135,7 +135,7 @@ export default function SebastianCoutoPortfolioV2() {
     {
       title: "Automation Foundations",
       icon: Code2,
-      items: ["Python", "pytest", "Selenium", "API Testing"],
+      items: ["Python", "pytest", "Selenium", "API Testing", "requests", "pdfplumber", "PyPDF2"],
     },
     {
       title: "CI / Delivery Signal",
@@ -277,17 +277,17 @@ export default function SebastianCoutoPortfolioV2() {
             <a href="#about" className="transition hover:text-white">
               About
             </a>
-            <a href="#work" className="transition hover:text-white">
-              Work
-            </a>
             <a href="#skills" className="transition hover:text-white">
               Skills
             </a>
+            <a href="#experience" className="transition hover:text-white">
+              Experience
+            </a>
+            <a href="#work" className="transition hover:text-white">
+              Work
+            </a>
             <a href="#metrics" className="transition hover:text-white">
               Metrics
-            </a>
-            <a href="#approach" className="transition hover:text-white">
-              Approach
             </a>
             <a href="#contact" className="transition hover:text-white">
               Contact
@@ -300,36 +300,65 @@ export default function SebastianCoutoPortfolioV2() {
         <section className="mx-auto grid max-w-7xl gap-12 px-6 pb-16 pt-10 lg:grid-cols-[1.08fr_0.92fr] lg:px-8 lg:pb-24 lg:pt-14">
           <div className="space-y-7">
             <div className="space-y-5">
-              <div className="inline-flex items-center gap-2 rounded-full border border-blue-300/20 bg-blue-400/10 px-4 py-2 text-xs uppercase tracking-[0.22em] text-blue-100 shadow-[0_0_20px_rgba(59,130,246,0.12)]">
-                <Bot className="h-3.5 w-3.5" />
-                QA Engineer · SDET · Automation
-              </div>
-
-              <h1 className="max-w-5xl text-4xl font-semibold leading-[1.08] tracking-tight text-white md:text-6xl">
-                Diseño sistemas de calidad con{" "}
-                <span className="text-blue-300">señal confiable</span> y{" "}
-                <span className="text-amber-200">feedback accionable</span>
-              </h1>
-
-              <p className="max-w-3xl text-lg leading-8 text-slate-300 md:text-xl">
-                No se trata solo de testear. Se trata de construir pipelines donde cada
-                ejecución entregue una señal clara para decidir: menos ruido, más confianza
-                y una automatización que realmente ayude a sostener el cambio.
-              </p>
-
-              <div className="flex flex-wrap gap-2 pt-1">
-                {narrativeTags.map((item) => (
+              <div className="inline-flex flex-wrap items-center gap-2 text-xs uppercase tracking-[0.22em] text-blue-100">
+                {[
+                  "QA Engineer",
+                  "SDET",
+                  "Automation",
+                  "Python",
+                  "pytest",
+                  "API Testing",
+                  "Postman",
+                  "JMeter",
+                  "GitHub Actions",
+                  "E2E",
+                ].map((tag) => (
                   <span
-                    key={item}
-                    className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-slate-300 transition duration-300 hover:border-blue-300/20 hover:bg-white/[0.07]"
+                    key={tag}
+                    className="rounded-full border border-blue-300/20 bg-blue-400/10 px-3 py-1"
                   >
-                    {item}
+                    {tag}
                   </span>
                 ))}
               </div>
+
+              <h1 className="max-w-5xl text-4xl font-semibold leading-[1.08] tracking-tight text-white md:text-6xl">
+                QA Engineer / SDET{" "}
+                <span className="text-blue-300">Diseño sistemas de CI que reducen el ruido </span> y{" "}
+                <span className="text-amber-200">generan feedback accionable en cada pull request.</span>
+              </h1>
             </div>
 
-            <div className="flex flex-wrap gap-4">
+            <div id="about" className="space-y-5 scroll-mt-24">
+              <div>
+                <p className="text-xs md:text-base uppercase tracking-[0.28em] text-blue-300">About me</p>
+              </div>
+
+              <div className="space-y-5">
+                <p className="max-w-2xl text-base leading-7 text-slate-300">
+                  QA Engineer con más de 10 años de experiencia en sistemas financieros y fintech 
+                  bajo normativas regionales, trabajando sobre flujos críticos, datos sensibles y 
+                  entornos de alta confiabilidad. Mi enfoque combina testing funcional, 
+                  automatización de APIs y diseño de pipelines de calidad orientados a señal.
+                </p>
+
+                <p className="max-w-2xl text-base leading-7 text-slate-400">
+                  Trabajo con Postman para exploración inicial de servicios y evoluciono hacia suites
+                  automatizadas en Python con pytest, integradas en CI para validar regresión,
+                  estabilidad de entornos y sanidad de sistemas. Actualmente enfocado en evolucionar
+                  hacia un rol SDET puro, construyendo soluciones que mejoren la calidad desde el pipeline.
+                </p>
+
+                <p className="max-w-2xl text-base leading-7 text-slate-400">
+                  Experiencia en entornos serverless sobre AWS, análisis de logs con CloudWatch
+                  y colaboración directa con equipos de desarrollo en la mejora de diagramas de
+                  arquitectura y flujos críticos. Participación en pruebas cross-producto y
+                  coordinación de validaciones en sistemas complejos.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-5">
               <a
                 href="#work"
                 className="rounded-2xl border border-blue-300/30 bg-blue-400/15 px-5 py-3 text-sm font-medium text-white shadow-lg shadow-blue-950/30 transition duration-300 hover:-translate-y-0.5 hover:bg-blue-400/20"
@@ -384,22 +413,6 @@ export default function SebastianCoutoPortfolioV2() {
                 <EmailIcon className="h-5 w-5" />
               </a>
             </div>
-
-            <div className="grid gap-4 pt-2 sm:grid-cols-3">
-              {[
-                ["10+", "Años en tecnología"],
-                ["QA → SDET", "De funcional a automation"],
-                ["CI Signal", "Menos ruido, más confianza"],
-              ].map(([value, label]) => (
-                <div
-                  key={label}
-                  className="rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm transition duration-300 hover:border-white/15 hover:bg-white/[0.07]"
-                >
-                  <p className="text-2xl font-semibold text-white">{value}</p>
-                  <p className="mt-1 text-sm text-slate-400">{label}</p>
-                </div>
-              ))}
-            </div>
           </div>
 
           <div className="relative">
@@ -409,7 +422,7 @@ export default function SebastianCoutoPortfolioV2() {
 
               <div className="mb-7 flex items-start justify-between gap-4">
                 <div>
-                  <p className="text-sm uppercase tracking-[0.24em] text-blue-200">Focus</p>
+                  <p className="text-sm md:text-base uppercase tracking-[0.24em] text-blue-200">Focus</p>
                   <h2 className="mt-2 text-2xl font-semibold text-white">
                     Quality Engineering Focus
                   </h2>
@@ -477,27 +490,80 @@ export default function SebastianCoutoPortfolioV2() {
 
         <SectionDivider />
 
-        <section id="about" className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-16">
+        <section id="skills" className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-14">
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
             <div>
-              <p className="text-sm uppercase tracking-[0.28em] text-blue-300">About</p>
-              <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
-                Beyond test execution
-              </h2>
+              <p className="text-sm md:text-base uppercase tracking-[0.28em] text-blue-300">Skills</p>
+              <div className="space-y-5">
+                <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
+                  Core stack and capabilities
+                </h2>
+
+                <p className="text-base leading-8 text-slate-400">
+                  Trabajo con APIs desde su exploración inicial en Postman hasta su evolución a suites
+                  automatizadas en Python con pytest, integradas en pipelines de CI para validar regresión,
+                  estabilidad y sanidad de los entornos.
+                </p>
+
+                <p className="text-base leading-8 text-slate-400">
+                  Experiencia en entornos serverless sobre AWS, análisis de logs con CloudWatch y colaboración
+                  directa con equipos de desarrollo en la mejora de diagramas de arquitectura y flujos críticos.
+                  Participación en pruebas cross-producto y coordinación de validaciones en sistemas complejos.
+                </p>
+
+                <p className="text-base leading-8 text-slate-400">
+                  Más que una lista de herramientas, esto representa cómo conecto stack,
+                  cobertura, señal de CI y estrategia de calidad.
+                </p>
+              </div>
             </div>
 
-            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-7 backdrop-blur-sm">
-              <div className="grid gap-6 md:grid-cols-2">
-                <p className="text-base leading-8 text-slate-300">
-                  Mi foco no es solo escribir tests. Me interesa diseñar sistemas de calidad
-                  sostenibles: validación funcional sólida, automatización útil, pipelines
-                  confiables y feedback que realmente sirva para tomar decisiones.
-                </p>
-                <p className="text-base leading-8 text-slate-300">
-                  Este portfolio busca mostrar trabajo real, experimentación técnica y una
-                  evolución clara desde QA funcional hacia quality engineering, automation
-                  architecture y señales de calidad más inteligentes dentro del ecosistema
-                  GitHub.
+            <div className="space-y-6 rounded-[2rem] border border-white/10 bg-white/5 p-7 backdrop-blur-sm">
+              <div className="grid gap-4 md:grid-cols-2">
+                {skillGroups.map((group) => {
+                  const Icon = group.icon;
+
+                  return (
+                    <div
+                      key={group.title}
+                      className="rounded-[1.5rem] border border-white/10 bg-slate-950/35 p-5 transition duration-300 hover:border-white/15 hover:bg-slate-950/45"
+                    >
+                      <div className="mb-4 flex items-center gap-3">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-2xl border border-blue-300/20 bg-blue-400/10 text-blue-200">
+                          <Icon className="h-5 w-5" />
+                        </div>
+                        <h3 className="text-base font-semibold text-white">{group.title}</h3>
+                      </div>
+
+                      <div className="flex flex-wrap gap-2">
+                        {group.items.map((item) => (
+                          <span
+                            key={item}
+                            className="rounded-2xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-200"
+                          >
+                            {item}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              <div className="rounded-[1.6rem] border border-amber-300/20 bg-slate-950/45 p-5 shadow-[0_0_30px_rgba(251,191,36,0.08)]">
+                <div className="mb-3 flex items-center gap-3">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-2xl border border-amber-300/25 bg-amber-300/10 text-amber-200">
+                    <Cpu className="h-4 w-4" />
+                  </div>
+                  <p className="text-sm uppercase tracking-[0.22em] text-amber-300">
+                    Quality signal mindset
+                  </p>
+                </div>
+
+                <p className="text-sm leading-7 text-slate-300">
+                  Mutation score, cobertura útil, flaky rate, feedback en PRs y tiempos de
+                  respuesta forman parte del tipo de señal que priorizo al diseñar suites
+                  automatizadas y workflows de calidad sostenibles.
                 </p>
               </div>
             </div>
@@ -506,15 +572,120 @@ export default function SebastianCoutoPortfolioV2() {
 
         <SectionDivider />
 
+        <section id="experience" className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-16">
+          <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+            <div className="space-y-5">
+              <div>
+                <p className="text-sm md:text-base font-medium uppercase tracking-[0.32em] text-blue-300/90">
+                  Professional Experience
+                </p>
+                <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
+                  QA embedded across the delivery cycle
+                </h2>
+              </div>
+
+              <p className="max-w-xl text-base leading-8 text-slate-300">
+                Me desenvuelvo muy bien dentro de equipos interdisciplinarios bajo metodologías ágiles,
+                participando activamente en ceremonias como dailys, refinamientos, reviews
+                y retrospectivas. Mi enfoque combina prácticas de QA, shift-left testing,
+                mejora continua de procesos y documentación clara para acompañar el ciclo
+                completo de desarrollo.
+              </p>
+
+              <p className="max-w-xl text-base leading-8 text-slate-400">
+                Entiendo la calidad como una práctica integrada al flujo de entrega, no
+                como una etapa aislada al final. Por eso priorizo colaboración temprana,
+                prevención de defectos, visibilidad compartida y feedback continuo dentro
+                del equipo.
+              </p>
+            </div>
+
+            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-[0_0_30px_rgba(59,130,246,0.08)] backdrop-blur-sm">
+
+            <div className="mb-5">
+              <p className="text-sm uppercase tracking-[0.22em] text-amber-300">
+                Agile + QA Flow
+              </p>
+              <h3 className="mt-2 text-xl font-semibold text-white">
+                Quality integrated into every iteration
+              </h3>
+            </div>
+
+            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+              {[
+                "Refinement",
+                "Development",
+                "Review",
+                "Retrospective",
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="rounded-2xl border border-blue-300/15 bg-slate-950/40 px-4 py-4 text-center text-sm text-slate-200 transition duration-300 hover:border-blue-300/25 hover:bg-slate-950/55"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-5 rounded-[1.6rem] border border-blue-300/20 bg-blue-400/10 p-5 shadow-[0_0_24px_rgba(59,130,246,0.10)]">
+              <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+                <div>
+                  <p className="text-sm uppercase tracking-[0.22em] text-blue-200">
+                    Testing across the entire cycle
+                  </p>
+                  <h4 className="mt-2 text-lg font-semibold text-white">
+                    Validation is embedded, not delayed
+                  </h4>
+                </div>
+
+                <span className="rounded-full border border-amber-300/20 bg-amber-300/10 px-3 py-1.5 text-xs text-amber-100">
+                  QA as a continuous practice
+                </span>
+              </div>
+
+              <p className="mt-4 text-sm leading-7 text-slate-300">
+                Testing acompaña todo el flujo de entrega con foco en prevención,
+                colaboración temprana, validación continua y feedback útil para el equipo.
+              </p>
+            </div>
+
+            <div className="mt-6 rounded-[1.5rem] border border-amber-300/20 bg-amber-300/10 p-4">
+              <p className="text-sm uppercase tracking-[0.22em] text-amber-200">
+                QA principles across the flow
+              </p>
+
+              <div className="mt-4 flex flex-wrap gap-2">
+                {[
+                  "Shift-left",
+                  "Risk awareness",
+                  "Continuous validation",
+                  "Documentation",
+                  "Feedback loop",
+                ].map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full border border-amber-300/20 bg-slate-950/30 px-3 py-1.5 text-xs text-amber-100"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+          </div>
+        </section>
+
+        <SectionDivider />
+
         <section id="work" className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-14">        
           <div className="mb-8 flex flex-col gap-4">
             <div>
-              <p className="text-sm uppercase tracking-[0.28em] text-blue-300">Featured Work</p>
+              <p className="text-sm md:text-base uppercase tracking-[0.28em] text-blue-300">Featured Work</p>
               <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
                 Projects in progress
               </h2>
             </div>
-            <p className="max-w-2xl text-sm leading-7 text-slate-400">
+            <p className="mt-4 text-base leading-8 text-slate-300 w-full lg:w-[85%] xl:w-[90%]">
               Mi intención es mostrar proyectos destacados de forma curada. Más adelante esta
               sección se nutrirá automáticamente desde GitHub con actividad, métricas y
               señales adicionales.
@@ -601,81 +772,14 @@ export default function SebastianCoutoPortfolioV2() {
         </section>
 
         <SectionDivider />
-
-        <section id="skills" className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-14">
-          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-            <div>
-              <p className="text-sm uppercase tracking-[0.28em] text-blue-300">Skills</p>
-              <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
-                Core stack and capabilities
-              </h2>
-              <p className="mt-4 max-w-md text-sm leading-7 text-slate-400">
-                Más que una lista de herramientas, esto representa cómo conecto stack,
-                cobertura, señal de CI y estrategia de calidad.
-              </p>
-            </div>
-
-            <div className="space-y-6 rounded-[2rem] border border-white/10 bg-white/5 p-7 backdrop-blur-sm">
-              <div className="grid gap-4 md:grid-cols-2">
-                {skillGroups.map((group) => {
-                  const Icon = group.icon;
-
-                  return (
-                    <div
-                      key={group.title}
-                      className="rounded-[1.5rem] border border-white/10 bg-slate-950/35 p-5 transition duration-300 hover:border-white/15 hover:bg-slate-950/45"
-                    >
-                      <div className="mb-4 flex items-center gap-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-2xl border border-blue-300/20 bg-blue-400/10 text-blue-200">
-                          <Icon className="h-5 w-5" />
-                        </div>
-                        <h3 className="text-base font-semibold text-white">{group.title}</h3>
-                      </div>
-
-                      <div className="flex flex-wrap gap-2">
-                        {group.items.map((item) => (
-                          <span
-                            key={item}
-                            className="rounded-2xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-200"
-                          >
-                            {item}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-
-              <div className="rounded-[1.6rem] border border-amber-300/20 bg-slate-950/45 p-5 shadow-[0_0_30px_rgba(251,191,36,0.08)]">
-                <div className="mb-3 flex items-center gap-3">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-2xl border border-amber-300/25 bg-amber-300/10 text-amber-200">
-                    <Cpu className="h-4 w-4" />
-                  </div>
-                  <p className="text-sm uppercase tracking-[0.22em] text-amber-300">
-                    Quality signal mindset
-                  </p>
-                </div>
-
-                <p className="text-sm leading-7 text-slate-300">
-                  Mutation score, cobertura útil, flaky rate, feedback en PRs y tiempos de
-                  respuesta forman parte del tipo de señal que priorizo al diseñar suites
-                  automatizadas y workflows de calidad sostenibles.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <SectionDivider />
-
+        
         <section id="metrics" className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-16">
           <div className="mb-8">
-            <p className="text-sm uppercase tracking-[0.28em] text-amber-300">Metrics</p>
+            <p className="text-sm md:text-base uppercase tracking-[0.28em] text-amber-300">Metrics</p>
             <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
               Signals, coverage and quality metrics
             </h2>
-            <p className="mt-4 max-w-3xl text-base leading-8 text-slate-300">
+            <p className="mt-4 text-base leading-8 text-slate-300 w-full lg:w-[85%] xl:w-[90%]">
               Cuando diseño suites automatizadas, no me enfoco solo en ejecutar tests. Me
               interesa medir la calidad de la señal: estabilidad, cobertura útil, feedback
               accionable y efectividad real de las validaciones.
@@ -740,7 +844,7 @@ export default function SebastianCoutoPortfolioV2() {
               <h3 className="mt-3 text-2xl font-semibold text-white">
                 Métricas conectadas a decisión, no solo a reporting
               </h3>
-              <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-300">
+              <p className="mt-4 text-base leading-7 text-slate-300">
                 Las métricas tienen valor cuando ayudan a interpretar la salud real del
                 pipeline: si la cobertura aporta confianza, si el feedback llega a tiempo,
                 si los tests sostienen cambios y si CI está dando una señal limpia o ruido.
@@ -774,46 +878,23 @@ export default function SebastianCoutoPortfolioV2() {
 
         <SectionDivider />
 
-        <section id="approach" className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-16">
-          <div className="mb-8">
-            <p className="text-sm uppercase tracking-[0.28em] text-blue-300">Approach</p>
-            <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
-              How I think about quality
-            </h2>
+        <section id="contact" className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-16">
+          <div className="mb-6">
+            <p className="text-sm md:text-base uppercase tracking-[0.28em] text-blue-300">
+              Contact
+            </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-3">
-            {principles.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={item.title}
-                  className="rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:border-white/15 hover:bg-white/[0.07]"
-                >
-                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl border border-blue-300/25 bg-blue-400/10 text-blue-200">
-                    <Icon className="h-5 w-5" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white">{item.title}</h3>
-                  <p className="mt-4 text-sm leading-7 text-slate-400">{item.text}</p>
-                </div>
-              );
-            })}
-          </div>
-        </section>
-
-        <SectionDivider />
-
-        <section id="contact" className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-20">
-          <div className="rounded-[2.25rem] border border-white/10 bg-gradient-to-br from-blue-400/10 via-white/5 to-cyan-400/10 p-8 shadow-[0_0_40px_rgba(251,191,36,0.06)] backdrop-blur-xl md:p-10">
-            <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+          <div className="rounded-[2.25rem] border border-white/10 bg-gradient-to-br from-blue-400/10 via-white/5 to-cyan-400/10 p-6 shadow-[0_0_40px_rgba(251,191,36,0.06)] backdrop-blur-xl md:p-8">
+            <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
+              
               <div>
-                <p className="text-sm uppercase tracking-[0.28em] text-blue-200">Contact</p>
-                <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
+                <h2 className="text-3xl font-semibold text-white md:text-4xl">
                   Let’s build better quality signals
                 </h2>
+
                 <p className="mt-4 max-w-2xl text-base leading-8 text-slate-300">
-                  Esta portfolio prioriza claridad, señal e identidad profesional, manteniendo una
+                  Este portfolio prioriza claridad, señal e identidad profesional, manteniendo una
                   base sólida para evolucionar hacia un portfolio vivo con datos automáticos
                   desde GitHub.
                 </p>
@@ -848,6 +929,7 @@ export default function SebastianCoutoPortfolioV2() {
                   Email
                 </a>
               </div>
+
             </div>
           </div>
         </section>
