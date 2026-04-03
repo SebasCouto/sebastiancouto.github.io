@@ -36,10 +36,10 @@ export default function SebastianCoutoPortfolioV2() {
         "Reusable QA engine that enables cross-repository validation, automated PR analysis and quality enforcement using GitHub Actions.",
       tags: ["QA", "CI/CD", "GitHub Actions", "Automation", "AI"],
       language: "YAML",
-      href: "https://github.com/PlatformUnityCI/cross-platform-guard",
+      href: "https://github.com/PlatformUnityCI/sebco-labs-platform-guard-showcase/blob/main/README.md",
       accent: "standard",
     },
-    {
+    /*{
       name: "Cross Quality CI",
       summary:
         "Capa de CI reutilizable que estandariza controles de calidad entre repositorios, permitiendo escalar pipelines de testing multilenguaje.",
@@ -47,7 +47,7 @@ export default function SebastianCoutoPortfolioV2() {
       language: "Multilanguage",
       href: "https://github.com/PlatformUnityCI/cross-quality-ci",
       accent: "standard",
-    },
+    }*/,
     {
       name: "Mutation Testing PoC",
       summary:
@@ -56,8 +56,8 @@ export default function SebastianCoutoPortfolioV2() {
       language: "Python",
       href: "https://github.com/PlatformUnityCI/sebco-labs-mutation-testing",
       accent: "core",
-    },    
-    {
+    },
+    /*{
       name: "Layer Validation PoC",
       summary:
         "Validación end-to-end de reportes financieros, conectando mocks de API, lógica de negocio y documentos PDF para asegurar consistencia real.",
@@ -65,7 +65,7 @@ export default function SebastianCoutoPortfolioV2() {
       language: "Python",
       href: "https://github.com/SebasCouto/sebco-labs-layer-validation",
       accent: "standard",
-    },
+    /,
     {
       name: "API Validation Suite",
       summary:
@@ -74,14 +74,14 @@ export default function SebastianCoutoPortfolioV2() {
       language: "Python",
       href: "Python",
       accent: "standard",
-    },
+    }*/,
     {
       name: "PR Feedback System",
       summary:
         "Automatización de hallazgos en pull requests con comentarios accionables, foco en señal y mejora continua.",
       tags: ["PR Review", "Automation", "Quality Gates"],
-      language: "In progress",
-      href: "Python",
+      language: "YAML",
+      href: "https://github.com/PlatformUnityCI/sebco-labs-mutation-testing/pull/72",
       accent: "core",
     },
   ];
@@ -671,7 +671,7 @@ export default function SebastianCoutoPortfolioV2() {
             <div>
               <p className="text-sm md:text-base uppercase tracking-[0.28em] text-blue-300">Featured Work</p>
               <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
-                Projects in progress
+                Selected Work
               </h2>
             </div>
             <p className="mt-4 text-base leading-8 text-slate-300 w-full lg:w-[85%] xl:w-[90%]">
