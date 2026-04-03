@@ -26,6 +26,7 @@ import {
 } from "lucide-react";
 
 import { GitHubIcon, LinkedInIcon, EmailIcon } from "./components/SocialIcons";
+import { FloatingCVButton } from "./components/FloatingCVButton";
 
 export default function SebastianCoutoPortfolioV2() {
   const featuredRepos = [
@@ -34,7 +35,7 @@ export default function SebastianCoutoPortfolioV2() {
       summary:
         "Reusable QA engine that enables cross-repository validation, automated PR analysis and quality enforcement using GitHub Actions.",
       tags: ["QA", "CI/CD", "GitHub Actions", "Automation", "AI"],
-      language: "Python",
+      language: "YAML",
       href: "https://github.com/PlatformUnityCI/cross-platform-guard",
       accent: "standard",
     },
@@ -43,7 +44,7 @@ export default function SebastianCoutoPortfolioV2() {
       summary:
         "Capa de CI reutilizable que estandariza controles de calidad entre repositorios, permitiendo escalar pipelines de testing multilenguaje.",
       tags: ["CI/CD", "Reusable Workflows", "Automation", "QA"],
-      language: "YAML",
+      language: "Multilanguage",
       href: "https://github.com/PlatformUnityCI/cross-quality-ci",
       accent: "standard",
     },
@@ -60,7 +61,7 @@ export default function SebastianCoutoPortfolioV2() {
       name: "Layer Validation PoC",
       summary:
         "Validación end-to-end de reportes financieros, conectando mocks de API, lógica de negocio y documentos PDF para asegurar consistencia real.",
-      tags: ["QA", "E2E", "Finance", "Automation", "psycopg2", "pytesseract", "PyPDF2"],
+      tags: ["QA", "Functional Testing E2E", "Finance", "Automation", "psycopg2", "pytesseract", "PyPDF2"],
       language: "Python",
       href: "https://github.com/SebasCouto/sebco-labs-layer-validation",
       accent: "standard",
@@ -69,9 +70,9 @@ export default function SebastianCoutoPortfolioV2() {
       name: "API Validation Suite",
       summary:
         "Validaciones orientadas a negocio para APIs, con foco en reglas, contratos y cobertura funcional sostenible.",
-      tags: ["API Testing", "Validation", "pytest"],
+      tags: ["API Testing", "Validation", "pytest", "requests"],
       language: "Python",
-      href: "#",
+      href: "Python",
       accent: "standard",
     },
     {
@@ -79,18 +80,9 @@ export default function SebastianCoutoPortfolioV2() {
       summary:
         "Automatización de hallazgos en pull requests con comentarios accionables, foco en señal y mejora continua.",
       tags: ["PR Review", "Automation", "Quality Gates"],
-      language: "TBD",
-      href: "#",
+      language: "In progress",
+      href: "Python",
       accent: "core",
-    },
-    {
-      name: "QA Reporting Lab",
-      summary:
-        "Exploraciones para transformar resultados técnicos en reportes más claros, visuales y útiles para seguimiento.",
-      tags: ["Reports", "Metrics", "QA"],
-      language: "TBD",
-      href: "#",
-      accent: "standard",
     },
   ];
 
@@ -277,11 +269,11 @@ export default function SebastianCoutoPortfolioV2() {
             <a href="#about" className="transition hover:text-white">
               About
             </a>
-            <a href="#skills" className="transition hover:text-white">
-              Skills
-            </a>
             <a href="#experience" className="transition hover:text-white">
               Experience
+            </a>
+            <a href="#skills" className="transition hover:text-white">
+              Skills
             </a>
             <a href="#work" className="transition hover:text-white">
               Work
@@ -311,7 +303,7 @@ export default function SebastianCoutoPortfolioV2() {
                   "Postman",
                   "JMeter",
                   "GitHub Actions",
-                  "E2E",
+                  "Functional Testing E2E",
                 ].map((tag) => (
                   <span
                     key={tag}
@@ -322,11 +314,21 @@ export default function SebastianCoutoPortfolioV2() {
                 ))}
               </div>
 
-              <h1 className="max-w-5xl text-4xl font-semibold leading-[1.08] tracking-tight text-white md:text-6xl">
-                QA Engineer / SDET{" "}
-                <span className="text-blue-300">Diseño sistemas de CI que reducen el ruido </span> y{" "}
-                <span className="text-amber-200">generan feedback accionable en cada pull request.</span>
-              </h1>
+            <h1 className="max-w-5xl text-4xl font-semibold leading-[1.08] tracking-tight text-white md:text-6xl">
+              <span className="block">
+                QA Engineer / SDET
+              </span>
+
+              <span className="block mt-4 text-lg md:text-2xl font-normal leading-relaxed">
+                <span className="text-blue-300">
+                  Diseño sistemas de CI agnósticos que reducen el ruido
+                </span>{" "}
+                y{" "}
+                <span className="text-amber-200">
+                  generan feedback accionable.
+                </span>
+              </span>
+            </h1>
             </div>
 
             <div id="about" className="space-y-5 scroll-mt-24">
@@ -336,8 +338,9 @@ export default function SebastianCoutoPortfolioV2() {
 
               <div className="space-y-5">
                 <p className="max-w-2xl text-base leading-7 text-slate-300">
-                  QA Engineer con más de 10 años de experiencia en sistemas financieros y fintech 
-                  bajo normativas regionales, trabajando sobre flujos críticos, datos sensibles y 
+                  QA Engineer con más de 10 años de experiencia en Testing y 
+                  4 años de experiencia en sistemas financieros y fintech bajo normativas regionales, 
+                  trabajando sobre flujos críticos, datos sensibles y 
                   entornos de alta confiabilidad. Mi enfoque combina testing funcional, 
                   automatización de APIs y diseño de pipelines de calidad orientados a señal.
                   Actualmente enfocado en evolucionar hacia un rol SDET puro, construyendo soluciones 
@@ -345,31 +348,6 @@ export default function SebastianCoutoPortfolioV2() {
                 </p>
 
               </div>
-            </div>
-
-            <div className="flex flex-wrap gap-5">
-              <a
-                href="#work"
-                className="rounded-2xl border border-blue-300/30 bg-blue-400/15 px-5 py-3 text-sm font-medium text-white shadow-lg shadow-blue-950/30 transition duration-300 hover:-translate-y-0.5 hover:bg-blue-400/20"
-              >
-                View My Work
-              </a>
-
-              <a
-                href="/Sebastian_Couto_CV_ES.pdf"
-                download="Sebastian-Couto-CV.pdf"
-                className="rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-medium text-slate-200 transition duration-300 hover:-translate-y-0.5 hover:bg-white/10"
-              >
-                CV - ES
-              </a>
-
-              <a
-                href="/Sebastian_Couto_CV_EN.pdf"
-                download="Sebastian-Couto-CV.pdf"
-                className="rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-medium text-slate-200 transition duration-300 hover:-translate-y-0.5 hover:bg-white/10"
-              >
-                CV - EN
-              </a>
             </div>
 
             <div className="flex flex-wrap gap-3 text-slate-300">
@@ -386,13 +364,6 @@ export default function SebastianCoutoPortfolioV2() {
                 aria-label="LinkedIn"
               >
                 <LinkedInIcon className="h-5 w-5 fill-white" />
-              </a>
-              <a
-                href="#work"
-                className="rounded-2xl border border-white/10 bg-white/5 p-3 transition duration-300 hover:-translate-y-0.5 hover:bg-white/10"
-                aria-label="Portfolio"
-              >
-                <Globe className="h-5 w-5" />
               </a>
               <a
                 href="mailto:sebastian.o.couto@gmail.com"
@@ -479,6 +450,139 @@ export default function SebastianCoutoPortfolioV2() {
 
         <SectionDivider />
 
+        <section id="experience" className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-13">
+          <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+            <div className="space-y-5">
+              <div>
+                <p className="text-sm md:text-base font-medium uppercase tracking-[0.32em] text-blue-300/90">
+                  Professional Experience
+                </p>
+                <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
+                  QA embedded across the delivery cycle
+                </h2>
+              </div>
+
+              <p className="max-w-xl text-base leading-8 text-slate-300">
+                Me desenvuelvo muy bien dentro de equipos interdisciplinarios bajo metodologías ágiles,
+                participando activamente en ceremonias como dailys, refinamientos, reviews
+                y retrospectivas. Mi enfoque combina prácticas de QA, shift-left testing,
+                mejora continua de procesos y documentación clara para acompañar el ciclo
+                completo de desarrollo.
+              </p>
+
+              <p className="max-w-xl text-base leading-8 text-slate-400">
+                Entiendo la calidad como una práctica integrada al flujo de entrega, no
+                como una etapa aislada al final. Por eso priorizo colaboración temprana,
+                prevención de defectos, visibilidad compartida y feedback continuo dentro
+                del equipo.
+              </p>
+            </div>
+
+            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-[0_0_30px_rgba(59,130,246,0.08)] backdrop-blur-sm">
+              <div className="mb-5">
+                <p className="text-sm uppercase tracking-[0.22em] text-amber-300">
+                  Agile + QA Flow
+                </p>
+                <h3 className="mt-2 text-xl font-semibold text-white">
+                  Quality integrated into every sprint
+                </h3>
+              </div>
+
+              <div className="relative rounded-[1.8rem] border border-blue-300/15 bg-slate-950/35 p-5">
+                <div className="flex flex-wrap justify-center gap-3">
+                  {[
+                    "Refinement",
+                    "Planning",
+                    "Development",
+                    "Review",
+                    "Retrospective",
+                  ].map((item) => (
+                    <div
+                      key={item}
+                      className={`max-w-[140px] rounded-2xl border px-4 py-3 text-center text-xs md:text-sm font-medium transition duration-300 ${
+                        item === "Development"
+                          ? "border-rose-300/20 bg-rose-400/10 text-rose-100 hover:border-rose-300/30 hover:bg-rose-400/15"
+                          : "border-blue-300/15 bg-slate-950/50 text-slate-200 hover:border-blue-300/25 hover:bg-slate-950/60"
+                      }`}
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-5 flex items-center justify-center">
+                  <div className="h-px w-full max-w-lg bg-gradient-to-r from-transparent via-blue-300/20 to-transparent" />
+                </div>
+
+                <div className="mt-5 rounded-[1.6rem] border border-blue-300/20 bg-blue-400/10 p-5 shadow-[0_0_24px_rgba(59,130,246,0.10)]">
+                  <div className="flex flex-col gap-3">
+                    <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+                      <div>
+                        <p className="text-sm uppercase tracking-[0.22em] text-blue-200">
+                          Testing across the entire cycle
+                        </p>
+                        <h4 className="mt-2 text-lg font-semibold text-white">
+                          Validation is embedded, not delayed
+                        </h4>
+                      </div>
+
+                      <span className="rounded-full border border-amber-300/20 bg-amber-300/10 px-3 py-1.5 text-xs text-amber-100">
+                        QA as a continuous practice
+                      </span>
+                    </div>
+
+                    <p className="text-sm leading-7 text-slate-300">
+                      Testing acompaña todo el flujo de entrega con foco en prevención,
+                      colaboración temprana, validación continua y feedback útil para el equipo.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                  {[
+                    "Daily sync and shared visibility",
+                    "Continuous feedback for better decisions",
+                    "Sprint goals aligned with quality",
+                    "Improvement loop after each iteration",
+                  ].map((item) => (
+                    <div
+                      key={item}
+                      className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-slate-300"
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-6 rounded-[1.5rem] border border-amber-300/20 bg-amber-300/10 p-4">
+                <p className="text-sm uppercase tracking-[0.22em] text-amber-200">
+                  QA principles across the flow
+                </p>
+
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {[
+                    "Shift-left",
+                    "Risk awareness",
+                    "Continuous validation",
+                    "Documentation",
+                    "Feedback loop",
+                  ].map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full border border-amber-300/20 bg-slate-950/30 px-3 py-1.5 text-xs text-amber-100"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <SectionDivider />
+
         <section id="skills" className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-14">
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
             <div>
@@ -557,111 +661,6 @@ export default function SebastianCoutoPortfolioV2() {
                 </p>
               </div>
             </div>
-          </div>
-        </section>
-
-        <SectionDivider />
-
-        <section id="experience" className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-16">
-          <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-            <div className="space-y-5">
-              <div>
-                <p className="text-sm md:text-base font-medium uppercase tracking-[0.32em] text-blue-300/90">
-                  Professional Experience
-                </p>
-                <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
-                  QA embedded across the delivery cycle
-                </h2>
-              </div>
-
-              <p className="max-w-xl text-base leading-8 text-slate-300">
-                Me desenvuelvo muy bien dentro de equipos interdisciplinarios bajo metodologías ágiles,
-                participando activamente en ceremonias como dailys, refinamientos, reviews
-                y retrospectivas. Mi enfoque combina prácticas de QA, shift-left testing,
-                mejora continua de procesos y documentación clara para acompañar el ciclo
-                completo de desarrollo.
-              </p>
-
-              <p className="max-w-xl text-base leading-8 text-slate-400">
-                Entiendo la calidad como una práctica integrada al flujo de entrega, no
-                como una etapa aislada al final. Por eso priorizo colaboración temprana,
-                prevención de defectos, visibilidad compartida y feedback continuo dentro
-                del equipo.
-              </p>
-            </div>
-
-            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-[0_0_30px_rgba(59,130,246,0.08)] backdrop-blur-sm">
-
-            <div className="mb-5">
-              <p className="text-sm uppercase tracking-[0.22em] text-amber-300">
-                Agile + QA Flow
-              </p>
-              <h3 className="mt-2 text-xl font-semibold text-white">
-                Quality integrated into every iteration
-              </h3>
-            </div>
-
-            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-              {[
-                "Refinement",
-                "Development",
-                "Review",
-                "Retrospective",
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="rounded-2xl border border-blue-300/15 bg-slate-950/40 px-4 py-4 text-center text-sm text-slate-200 transition duration-300 hover:border-blue-300/25 hover:bg-slate-950/55"
-                >
-                  {item}
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-5 rounded-[1.6rem] border border-blue-300/20 bg-blue-400/10 p-5 shadow-[0_0_24px_rgba(59,130,246,0.10)]">
-              <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-                <div>
-                  <p className="text-sm uppercase tracking-[0.22em] text-blue-200">
-                    Testing across the entire cycle
-                  </p>
-                  <h4 className="mt-2 text-lg font-semibold text-white">
-                    Validation is embedded, not delayed
-                  </h4>
-                </div>
-
-                <span className="rounded-full border border-amber-300/20 bg-amber-300/10 px-3 py-1.5 text-xs text-amber-100">
-                  QA as a continuous practice
-                </span>
-              </div>
-
-              <p className="mt-4 text-sm leading-7 text-slate-300">
-                Testing acompaña todo el flujo de entrega con foco en prevención,
-                colaboración temprana, validación continua y feedback útil para el equipo.
-              </p>
-            </div>
-
-            <div className="mt-6 rounded-[1.5rem] border border-amber-300/20 bg-amber-300/10 p-4">
-              <p className="text-sm uppercase tracking-[0.22em] text-amber-200">
-                QA principles across the flow
-              </p>
-
-              <div className="mt-4 flex flex-wrap gap-2">
-                {[
-                  "Shift-left",
-                  "Risk awareness",
-                  "Continuous validation",
-                  "Documentation",
-                  "Feedback loop",
-                ].map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full border border-amber-300/20 bg-slate-950/30 px-3 py-1.5 text-xs text-amber-100"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
           </div>
         </section>
 
@@ -836,8 +835,9 @@ export default function SebastianCoutoPortfolioV2() {
               </h3>
               <p className="mt-4 text-base leading-7 text-slate-300">
                 Las métricas tienen valor cuando ayudan a interpretar la salud real del
-                pipeline: si la cobertura aporta confianza, si el feedback llega a tiempo,
-                si los tests sostienen cambios y si CI está dando una señal limpia o ruido.
+                proyecto, no solo del pipeline. Permiten entender si la cobertura aporta
+                confianza, si los tests sostienen cambios en el tiempo y si el CI está
+                generando una señal clara o simplemente ruido en el feedback que recibe el equipo.
               </p>
             </div>
 
@@ -924,6 +924,7 @@ export default function SebastianCoutoPortfolioV2() {
           </div>
         </section>
       </main>
+      <FloatingCVButton />
     </div>
   );
 }
