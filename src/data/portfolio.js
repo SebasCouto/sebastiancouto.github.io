@@ -24,53 +24,44 @@ export const featuredRepos = [
       "Reusable QA engine that enables cross-repository validation, automated PR analysis and quality enforcement using GitHub Actions.",
     tags: ["QA", "CI/CD", "GitHub Actions", "Automation", "AI"],
     language: "YAML",
-    href: "https://github.com/PlatformUnityCI/sebco-labs-platform-guard-showcase/blob/main/README.md",
+    href: "https://github.com/PlatformUnityCI/cross-platform-guard/blob/main/README.md",
     accent: "standard",
   },
-  /*{
+  {
     name: "Cross Quality CI",
     summary:
       "Capa de CI reutilizable que estandariza controles de calidad entre repositorios, permitiendo escalar pipelines de testing multilenguaje.",
-    tags: ["CI/CD", "Reusable Workflows", "Automation", "QA"],
+    tags: ["CI/CD", "Reusable Workflows", "Automation", "Analyzers"],
     language: "Multilanguage",
-    href: "https://github.com/PlatformUnityCI/cross-quality-ci",
+    href: "https://github.com/PlatformUnityCI/sebco-qa-engine/blob/main/README.md",
     accent: "standard",
-  }*/,
+  },
+    {
+    name: "PR Feedback System",
+    summary:
+      "Automatización de hallazgos en pull requests con comentarios accionables, foco en señal y mejora continua.",
+    tags: ["PR Review", "Automation", "Quality Gates"],
+    language: "Python",
+    href: "https://github.com/PlatformUnityCI/sebco-labs-python-metrics-PoC/actions/runs/24146668371#summary-70462364544",
+    accent: "core",
+  },
   {
     name: "Mutation Testing PoC",
     summary:
       "Exploración práctica de mutmut para medir efectividad de tests, detectar mutantes sobrevivientes y fortalecer cobertura real.",
     tags: ["mutmut", "pytest", "Test Effectiveness"],
     language: "Python",
-    href: "https://github.com/PlatformUnityCI/sebco-labs-mutation-testing",
+    href: "https://github.com/PlatformUnityCI/sebco-labs-mutation-testing/blob/main/README.md",
     accent: "core",
   },
-  /*{
+  {
     name: "Layer Validation PoC",
     summary:
       "Validación end-to-end de reportes financieros, conectando mocks de API, lógica de negocio y documentos PDF para asegurar consistencia real.",
-    tags: ["QA", "Functional Testing E2E", "Finance", "Automation", "psycopg2", "pytesseract", "PyPDF2"],
+    tags: ["QA", "Functional Testing E2E", "Finance", "Automation", "psycopg2", "pytesseract", "PyPDF2", "IN PROGRESS"],
     language: "Python",
     href: "https://github.com/SebasCouto/sebco-labs-layer-validation",
     accent: "standard",
-  /,
-  {
-    name: "API Validation Suite",
-    summary:
-      "Validaciones orientadas a negocio para APIs, con foco en reglas, contratos y cobertura funcional sostenible.",
-    tags: ["API Testing", "Validation", "pytest", "requests"],
-    language: "Python",
-    href: "Python",
-    accent: "standard",
-  }*/,
-  {
-    name: "PR Feedback System",
-    summary:
-      "Automatización de hallazgos en pull requests con comentarios accionables, foco en señal y mejora continua.",
-    tags: ["PR Review", "Automation", "Quality Gates"],
-    language: "YAML",
-    href: "https://github.com/PlatformUnityCI/sebco-labs-mutation-testing/pull/72",
-    accent: "core",
   },
 ];
 
