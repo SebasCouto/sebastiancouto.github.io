@@ -50,8 +50,7 @@ export function HeroSection() {
 
           <div className="space-y-5">
             <p className="max-w-2xl text-base leading-7 text-slate-300">
-              QA Engineer con más de 10 años de experiencia en Testing y 4 años de experiencia en
-              sistemas financieros y fintech bajo normativas regionales, trabajando sobre flujos
+              QA Engineer con más de 10 años de experiencia en testing y automatización, con sólida experiencia en sistemas financieros y fintech bajo normativas regionales, trabajando sobre flujos
               críticos, datos sensibles y entornos de alta confiabilidad. Mi enfoque combina testing
               funcional, automatización de APIs y diseño de pipelines de calidad orientados a señal.
               Actualmente enfocado en evolucionar hacia un rol SDET puro, construyendo soluciones que
