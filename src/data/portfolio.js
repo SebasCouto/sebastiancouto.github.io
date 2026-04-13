@@ -42,7 +42,7 @@ export const featuredRepos = [
       "API de transferencias diseñada para testing end-to-end en flujos financieros. Incluye validaciones de negocio, idempotencia y documentación OpenAPI publicada para validar contratos y escenarios reales.",
     tags: ["QA", "API Testing", "FastAPI", "OpenAPI", "CI/CD", "Automation"],
     language: "Python",
-    href: "https://sebascouto.github.io/sebco-labs-payments-api-consumer-tests/swagger/",
+    href: "https://platformunityci.github.io/sebco-labs-payments-api-consumer-tests/swagger/",
     accent: "core",
   },
   {
@@ -63,6 +63,7 @@ export const featuredRepos = [
     href: "https://github.com/PlatformUnityCI/sebco-labs-mutation-testing/blob/main/README.md",
     accent: "core",
   },
+
 ];
 
 export const focusAreas = [
