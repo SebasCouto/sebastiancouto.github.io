@@ -32,14 +32,14 @@ export function FloatingCVButton() {
                 <Download className="h-4 w-4" />
               </a>
 
-              <a
-                href="/Sebastian_Couto_CV_EN.pdf"
-                download="Sebastian-Couto-CV-EN.pdf"
-                className="inline-flex items-center justify-between rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-slate-200 transition hover:bg-white/10"
-              >
-                CV - EN
-                <Download className="h-4 w-4" />
-              </a>
+              #<a
+              #  href="/Sebastian_Couto_CV_EN.pdf"
+              #  download="Sebastian-Couto-CV-EN.pdf"
+              #  className="inline-flex items-center justify-between rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-slate-200 transition hover:bg-white/10"
+              #>
+              #  CV - EN
+              #  <Download className="h-4 w-4" />
+              #</a>
             </div>
           </div>
         )}
