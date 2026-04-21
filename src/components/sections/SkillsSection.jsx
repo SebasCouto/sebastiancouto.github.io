@@ -14,7 +14,7 @@ export function SkillsSection() {
 
             <p className="max-w-2xl text-base leading-7 text-slate-400">
               Trabajo con Postman para exploración inicial de servicios y evolución hacia suites automatizadas en Python utilizando pytest y la librería requests para testing de APIs.
-              Implemento validación de contratos en servicios REST (JSON), así como consumo y testing de servicios SOAP (XML) y GraphQL mediante requests HTTP, asegurando correcta integración y consistencia de datos entre sistemas.
+              Implemento validación de contratos en servicios REST (JSON), así como consumo y testing de servicios SOAP (XML) mediante requests HTTP, asegurando correcta integración y consistencia de datos entre sistemas.
               Diseño y mantenimiento de suites de regresión integradas en pipelines CI/CD (GitHub Actions), con ejecución automatizada y control de calidad continuo.
               Experiencia en entornos serverless en AWS utilizando boto3 para interacción con DynamoDB, y monitoreo de logs y ejecución de Lambdas mediante API Gateway y CloudWatch.
             </p>
