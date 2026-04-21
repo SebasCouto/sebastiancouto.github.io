@@ -14,8 +14,8 @@ export function ExperienceSection() {
 
           <p className="max-w-xl text-base leading-8 text-slate-300">
             Me desenvuelvo muy bien dentro de equipos interdisciplinarios bajo metodologías ágiles,
-            participando activamente en ceremonias como dailys, refinamientos, reviews y
-            retrospectivas. Mi enfoque combina prácticas de QA, shift-left testing, mejora continua
+            participando activamente en ceremonias como dailys, refinamientos, reviews,
+            retrospectivas y plannings. Mi enfoque combina prácticas de QA, shift-left testing, mejora continua
             de procesos y documentación clara para acompañar el ciclo completo de desarrollo.
           </p>
 

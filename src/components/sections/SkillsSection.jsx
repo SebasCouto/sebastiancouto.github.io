@@ -14,20 +14,19 @@ export function SkillsSection() {
 
             <p className="max-w-2xl text-base leading-7 text-slate-400">
               Trabajo con Postman para exploración inicial de servicios y evoluciono hacia suites
-              automatizadas en Python con pytest y requests, integradas en CI para validar regresión,
-              estabilidad de entornos y sanidad de sistemas.
+              automatizadas en Python con framework de pytest utilizando (request) para validacion de 
+              contratos de api-rest, SOAP y GraphQL. Diseño y mantenimiento de suites integradas en CI/CD (Github) 
+              para regresión testing. Experiencia en entornos serverless sobre AWS utilizando boto3 para consultas 
+              en DynamoDB. API Gateway y Cloudwatch de lambdas. 
             </p>
 
             <p className="max-w-2xl text-base leading-7 text-slate-400">
-              Experiencia en entornos serverless sobre AWS, análisis de logs con CloudWatch y
-              colaboración directa con equipos de desarrollo en la mejora de diagramas de
-              arquitectura y flujos críticos. Participación en pruebas cross-producto y coordinación
-              de validaciones en sistemas complejos.
+              Participación en pruebas cross-producto, cross-teams y coordinación de test plans durante pruebas de 
+              negocio en sistemas complejos como "la integración con diferentes proveedores/billeteras".
             </p>
 
             <p className="text-base leading-8 text-slate-400">
-              Más que una lista de herramientas, esto representa cómo conecto stack, cobertura,
-              señal de CI y estrategia de calidad.
+              Más que una lista de skilss, esto representa cómo conecto stack, cobertura,señal de CI y estrategia de calidad.
             </p>
           </div>
         </div>
