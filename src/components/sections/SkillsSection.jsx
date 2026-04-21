@@ -13,20 +13,19 @@ export function SkillsSection() {
             </h2>
 
             <p className="max-w-2xl text-base leading-7 text-slate-400">
-              Trabajo con Postman para exploración inicial de servicios y evoluciono hacia suites
-              automatizadas en Python con framework de pytest utilizando (request) para validacion de 
-              contratos de api-rest, SOAP y GraphQL. Diseño y mantenimiento de suites integradas en CI/CD (Github) 
-              para regresión testing. Experiencia en entornos serverless sobre AWS utilizando boto3 para consultas 
-              en DynamoDB. API Gateway y Cloudwatch de lambdas. 
+              Trabajo con Postman para exploración inicial de servicios y evolución hacia suites automatizadas en Python utilizando pytest y la librería requests para testing de APIs.
+              Implemento validación de contratos en servicios REST (JSON), así como consumo y testing de servicios SOAP (XML) y GraphQL mediante requests HTTP, asegurando correcta integración y consistencia de datos entre sistemas.
+              Diseño y mantenimiento de suites de regresión integradas en pipelines CI/CD (GitHub Actions), con ejecución automatizada y control de calidad continuo.
+              Experiencia en entornos serverless en AWS utilizando boto3 para interacción con DynamoDB, y monitoreo de logs y ejecución de Lambdas mediante API Gateway y CloudWatch.
             </p>
 
             <p className="max-w-2xl text-base leading-7 text-slate-400">
-              Participación en pruebas cross-producto, cross-teams y coordinación de test plans durante pruebas de 
-              negocio en sistemas complejos como "la integración con diferentes proveedores/billeteras".
+              Participación activa en pruebas cross-producto y coordinación de test plans junto a múltiples equipos (QA, backend, producto y proveedores externos), asegurando la validación end-to-end de flujos de negocio en sistemas distribuidos.
+              Experiencia en testing de integraciones con proveedores externos y billeteras digitales, validando flujos de transferencia, conciliación de estados y consistencia de datos entre sistemas en arquitecturas desacopladas.
             </p>
 
             <p className="text-base leading-8 text-slate-400">
-              Más que una lista de skilss, esto representa cómo conecto stack, cobertura,señal de CI y estrategia de calidad.
+              Este enfoque refleja una visión de calidad que va más allá de la ejecución de tests, integrando automatización, cobertura funcional y técnica, y su impacto en pipelines de CI/CD como parte de una estrategia continua de calidad del software.
             </p>
           </div>
         </div>
